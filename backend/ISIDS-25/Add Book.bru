@@ -1,0 +1,29 @@
+meta {
+  name: Add Book
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:3000/books/new
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pZGhhbEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc2NTg4Mjg3NCwiZXhwIjoxNzY2NDg3Njc0fQ.Pfvxh-pTklbAP3AOnFFeik90lS2gpsvrA1l8FQqXYiI
+}
+
+body:json {
+  {
+    "title" : "book 1",
+    "year" : 2025,
+    "editor" : "ISIDS",
+    "image" : "avatar.jpg"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

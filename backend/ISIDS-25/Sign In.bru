@@ -1,0 +1,23 @@
+meta {
+  name: Sign In
+  type: http
+  seq: 21
+}
+
+post {
+  url: http://localhost:3000/auth/signin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "identifiant" : "nidhal@gmail.com",
+    "password" : "azerty"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
